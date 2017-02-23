@@ -39,7 +39,7 @@ financial_features_list = [
 ]
 features_list = [target_label] + financial_features_list + email_features_list
 ### Load the dictionary containing the dataset
-data_dict = pickle.load(open("../final_project/final_project_dataset.pkl", "r") )
+data_dict = pickle.load(open("../data/final_project_dataset.pkl", "r") )
 
 ### Task 2: Remove outliers
 outlier_keys = ['TOTAL', 'THE TRAVEL AGENCY IN THE PARK', 'LOCKHART EUGENE E']
@@ -163,7 +163,7 @@ data_cleaner.stratified_k_fold(gauss_clf,features,labels)
 ### that the version of poi_id.py that you submit can be run on its own and
 ### generates the necessary .pkl files for validating your results.
 
-pickle.dump(clf, open("../final_project/my_classifier.pkl", "w"))
-pickle.dump(my_dataset, open("../final_project/my_dataset.pkl", "w"))
-pickle.dump(my_feature_list, open("../final_project/my_feature_list.pkl", "w"))
+pickle.dump(clf, open("../data/my_classifier.pkl", "w"))
+pickle.dump(my_dataset, open("../data/my_dataset.pkl", "w"))
+pickle.dump(my_feature_list, open("../data/my_feature_list.pkl", "w"))
 
